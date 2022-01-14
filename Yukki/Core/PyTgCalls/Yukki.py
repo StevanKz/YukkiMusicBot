@@ -701,9 +701,7 @@ async def clear_queue(chat_id):
 ### Playout End For Client 1
 @pytgcalls1.on_stream_end()
 async def stream_end_handler1(_, update: Update):
-    if isinstance(update, StreamAudioEnded):
-        pass
-    else:
+    if not isinstance(update, StreamAudioEnded):
         return
     await playout_end(pytgcalls1, update.chat_id)
 
@@ -711,9 +709,7 @@ async def stream_end_handler1(_, update: Update):
 ### Playout End For Client 2
 @pytgcalls2.on_stream_end()
 async def stream_end_handler(_, update: Update):
-    if isinstance(update, StreamAudioEnded):
-        pass
-    else:
+    if not isinstance(update, StreamAudioEnded):
         return
     await playout_end(pytgcalls2, update.chat_id)
 
@@ -721,9 +717,7 @@ async def stream_end_handler(_, update: Update):
 ### Playout End For Client 3
 @pytgcalls3.on_stream_end()
 async def stream_end_handler3(_, update: Update):
-    if isinstance(update, StreamAudioEnded):
-        pass
-    else:
+    if not isinstance(update, StreamAudioEnded):
         return
     await playout_end(pytgcalls3, update.chat_id)
 
@@ -731,9 +725,7 @@ async def stream_end_handler3(_, update: Update):
 ### Playout End For Client 4
 @pytgcalls4.on_stream_end()
 async def stream_end_handler(_, update: Update):
-    if isinstance(update, StreamAudioEnded):
-        pass
-    else:
+    if not isinstance(update, StreamAudioEnded):
         return
     await playout_end(pytgcalls4, update.chat_id)
 
@@ -741,9 +733,7 @@ async def stream_end_handler(_, update: Update):
 ### Playout End For Client 5
 @pytgcalls5.on_stream_end()
 async def stream_end_handler5(_, update: Update):
-    if isinstance(update, StreamAudioEnded):
-        pass
-    else:
+    if not isinstance(update, StreamAudioEnded):
         return
     await playout_end(pytgcalls5, update.chat_id)
 
